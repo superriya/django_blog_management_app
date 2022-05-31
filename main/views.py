@@ -63,7 +63,7 @@ def show_category(request, pk):
     # show all tags
     tags = Tag.objects.all()
     # show most-common tags
-    common_tags = Post.tags.most_common()[:5]
+    common_tags = Post.tags.most_common()[:4]
     cats = Category.objects.all()
     categories = Category.objects.get(id=pk)
     category_post = Post.objects.filter(category = categories).order_by('-created_at') 
